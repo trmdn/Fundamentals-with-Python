@@ -1,0 +1,5 @@
+input_num = int(input("Enter an integer: "))
+num_str = str(input_num)
+rearranged_str = ''.join(sorted(num_str))
+output_num = int(rearranged_str)
+print("Output:", output_num)
