@@ -1,5 +1,5 @@
-input_num = int(input("Enter an integer: "))
-num_str = str(input_num)
-rearranged_str = ''.join(sorted(num_str))
-output_num = int(rearranged_str)
-print("Output:", output_num)
+number = int(input())
+number_as_string = str(number)
+
+for i in range(len(number_as_string) -1, -1, -1):
+    print(number_as_string[i], end="")
