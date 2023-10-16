@@ -1,19 +1,15 @@
-# •	coffee - 1.50 water - 1.00 coke - 1.40 snacks - 2.00
+def calculate_total_price(prod, count):
+    if prod == "coffee":
+        return f'{1.50 * count:.2f}'
+    elif prod == "coke":
+        return f'{1.40 * count:.2f}'
+    elif prod == "water":
+        return f'{1.00 * count:.2f}'
+    elif prod == "snacks":
+        return f'{2.00 * count:.2f}'
 
 
-def coffe_shop(name, number):
-    if name == "coffee":
-        price = 1.50
-    elif name == "water":
-        price = 1.00
-    elif name == "coke":
-        price = 1.40
-    elif name == "snacks":
-        price = 2.00
-    result = price * number
-    return result
-
-
-orders = input()
+product = input()
 quantity = int(input())
-print(coffe_shop(number))
+result = calculate_total_price(product, quantity)
+print(result)
