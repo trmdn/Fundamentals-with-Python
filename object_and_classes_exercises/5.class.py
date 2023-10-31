@@ -1,13 +1,13 @@
 class Class:
     __students_count = 22
 
-    def __init__(self, name: str):
+    def __init__(self, name):
         self.name = name
         self.students = []
         self.grades = []
 
-    def add_student(self, name: str, grade: float):
-        if self.__students_count > 0:
+    def add_student(self, name: str, grade: float) -> None:
+        if Class.__students_count > len(self.students):
             self.students.append(name)
             self.grades.append(grade)
 
