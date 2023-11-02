@@ -1,17 +1,15 @@
-products = []
-command = input()
+product_input = input()
 
-while command != "statistics":
-    tokens = command.split(": ")
-    product = tokens[0]
-    quantity = int(tokens[1])
-    if product not in products:
-        products[product] = 0
-    products[product] += quantity
-    command = input()
+product_in_stock = {}
+
+while product_input != "statistics":
+    product, quantity = product_input.split(": ")
+    product_in_stock[product] = product_in_stock.get(product, 0 ) + int(quantity)
+    product_input = input()
 
 print("Products in stock:")
-for product, quantity in products.items():
+
+for product, quantity in product_in_stock.items():
     print(f"- {product}: {quantity}")
-print(f"Total Products: {len(products.keys())}")
-print(f"Total Quantity: {sum(products.values())}")
+print(f"Total Products: {len(product_in_stock)}")
+print(f"Total Quantity: {sum(product_in_stock.values())}")
