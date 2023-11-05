@@ -4,7 +4,7 @@ product_in_stock = {}
 
 while product_input != "statistics":
     product, quantity = product_input.split(": ")
-    product_in_stock[product] = product_in_stock.get(product, 0 ) + int(quantity)
+    product_in_stock[product] = product_in_stock.get(product, 0) + int(quantity)
     product_input = input()
 
 print("Products in stock:")
