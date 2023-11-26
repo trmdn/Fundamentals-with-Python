@@ -1,0 +1,1 @@
+some_strings = input().split(">")
