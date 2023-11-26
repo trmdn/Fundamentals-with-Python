@@ -10,4 +10,4 @@ if first_string_len > second_string_len:
 elif first_string_len < second_string_len:
     for _ in range(second_string_len - first_string_len):
         first_string.append(1)
-print(sum([first_string[i] * second_string[i] for i in range(len(first_string))]))  
+print(sum([first_string[i] * second_string[i] for i in range(len(first_string))]))
