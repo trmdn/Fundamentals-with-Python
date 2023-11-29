@@ -14,8 +14,7 @@ while command != "Reveal":
             found_error = True
         else:
             word_find = main_string.find(substring)
-            main_string = main_string[:word_find] + main_string[word_find: + len(substring)]
-            main_string += substring[::-1]
+            main_string = main_string[:word_find] + substring[::-1]
     elif command_type == "InsertSpace":
         index = int(info[0])
         main_string = main_string[:index] + " " + main_string[index:]
