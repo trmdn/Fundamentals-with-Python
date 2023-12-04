@@ -12,3 +12,4 @@ for _ in range(number_of_passwords):
         print(f"Password: {encrypted_password}")
     else:
         print("Try another password!")
+
